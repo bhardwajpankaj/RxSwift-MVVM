@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "735E8BF0CAE190EDAD954B343180E481"
+               BlueprintIdentifier = "571DFE523F44A7FF30CB184030306BDD"
                BuildableName = "Pods_RxSwift_MVVM.framework"
                BlueprintName = "Pods-RxSwift-MVVM"
                ReferencedContainer = "container:Pods.xcodeproj">

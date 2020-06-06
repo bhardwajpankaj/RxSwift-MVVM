@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="RxSwift_MVVM" customModuleProvider="target">
+            <connections>
+                <outlet property="animateView" destination="gka-pa-cqX" id="2xh-d4-zWr"/>
+                <outlet property="containerView" destination="xT7-3t-Mhh" id="T8g-hD-uHb"/>
+                <outlet property="messageLabel" destination="kbg-ql-PS7" id="Axc-pn-oWt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xT7-3t-Mhh">
+            <rect key="frame" x="0.0" y="0.0" width="193" height="187"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kbg-ql-PS7">
+                    <rect key="frame" x="66.5" y="176" width="60" height="20"/>
+                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gka-pa-cqX" customClass="AnimateloadingView" customModule="MVVMRx" customModuleProvider="target">
+                    <rect key="frame" x="48.5" y="67.5" width="96.5" height="96.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gka-pa-cqX" secondAttribute="height" multiplier="1:1" id="Hnq-dP-3OC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gka-pa-cqX" firstAttribute="width" secondItem="xT7-3t-Mhh" secondAttribute="width" multiplier="0.5" id="0Zx-ab-tLi"/>
+                <constraint firstItem="gka-pa-cqX" firstAttribute="centerX" secondItem="Su2-fa-RiA" secondAttribute="centerX" id="VnN-9Y-fpC"/>
+                <constraint firstItem="kbg-ql-PS7" firstAttribute="top" secondItem="gka-pa-cqX" secondAttribute="bottom" constant="12" id="XOC-5u-jDR"/>
+                <constraint firstItem="gka-pa-cqX" firstAttribute="centerY" secondItem="Su2-fa-RiA" secondAttribute="centerY" id="qp1-kU-8If"/>
+                <constraint firstItem="kbg-ql-PS7" firstAttribute="centerX" secondItem="Su2-fa-RiA" secondAttribute="centerX" id="tcQ-uM-l5M"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Su2-fa-RiA"/>
+            <point key="canvasLocation" x="-57.24637681159421" y="-211.27232142857142"/>
+        </view>
+    </objects>
+</document>
