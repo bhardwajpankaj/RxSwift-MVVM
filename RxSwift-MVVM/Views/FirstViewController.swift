@@ -16,21 +16,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var tracksVCView: UIView!
     
     @IBOutlet weak var albumsVCView: UIView!
-    
-    private lazy var albumsViewController: AlbumsCollectionViewVC = {
-        // Load Storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "AlbumsCollectionViewVC") as! AlbumsCollectionViewVC
-        
-        // Add View Controller as Child View Controller
-        self.add(asChildViewController: viewController, to: albumsVCView)
-        
-        return viewController
-    }()
-    
-    
     private lazy var tracksViewController: TracksTableViewVC = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -53,7 +39,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addBlurArea(area: self.view.frame, style: .dark)
         setupBindings()
         homeViewModel.requestData()
     }
@@ -85,13 +70,6 @@ class FirstViewController: UIViewController {
             .disposed(by: disposeBag)
         
         
-        // binding albums to album container
-        
-        homeViewModel
-            .albums
-            .observeOn(MainScheduler.instance)
-            .bind(to: albumsViewController.albums)
-            .disposed(by: disposeBag)
         
         // binding tracks to track container
         
